@@ -1,86 +1,32 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#111111" />
-  <title>Catálogo digital | Alfacolor</title>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c0c0e"><title>Alfacolor Experience</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="welcome" class="welcome" aria-label="Portada de bienvenida">
-    <div class="welcome-card">
-      <img src="logo.png" alt="Alfacolor" class="welcome-logo" />
-      <p>Imprenta · Promocionales · Uniformes</p>
-      <button id="openCatalog" class="primary-button">Abrir catálogo</button>
-      <small>Desliza o toca las esquinas para hojearlo</small>
-    </div>
+<section id="welcome" class="welcome">
+  <div class="ink ink-c"></div><div class="ink ink-m"></div><div class="ink ink-y"></div><div class="ink ink-k"></div>
+  <div class="welcome-card">
+    <img src="logo.png" class="welcome-logo" alt="Alfacolor">
+    <div class="eyebrow">ALFACOLOR EXPERIENCE</div>
+    <h1>La mejor opción a tus necesidades de impresión.</h1>
+    <p>Imprenta · Promocionales · Uniformes</p>
+    <button id="openCatalog" class="primary-button">ABRIR CATÁLOGO <span>→</span></button>
   </div>
-
-  <header class="topbar">
-    <img src="logo.png" alt="Alfacolor" class="brand-logo" />
-    <div class="catalog-title">
-      <strong>Catálogo digital</strong>
-      <span>Alfacolor</span>
-    </div>
-    <div class="top-actions">
-      <button id="toggleSearch" class="icon-button" title="Buscar" aria-label="Buscar">⌕</button>
-      <button id="toggleThumbs" class="icon-button" title="Miniaturas" aria-label="Miniaturas">▦</button>
-      <a class="icon-button" href="catalogo.pdf" download title="Descargar PDF" aria-label="Descargar PDF">⇩</a>
-      <button id="fullscreen" class="icon-button" title="Pantalla completa" aria-label="Pantalla completa">⛶</button>
-    </div>
-  </header>
-
-  <aside id="sidebar" class="sidebar" aria-hidden="true">
-    <div class="sidebar-head">
-      <strong id="sidebarTitle">Páginas</strong>
-      <button id="closeSidebar" class="close-button" aria-label="Cerrar">×</button>
-    </div>
-    <div id="searchPanel" class="search-panel hidden">
-      <input id="searchInput" type="search" placeholder="Buscar: tarjetas, lona, uniformes…" autocomplete="off" />
-      <button id="searchButton">Buscar</button>
-      <div id="searchResults" class="search-results"></div>
-    </div>
-    <div id="thumbnails" class="thumbnails"></div>
-  </aside>
-
-  <main class="viewer-shell">
-    <div class="ambient ambient-c"></div>
-    <div class="ambient ambient-m"></div>
-    <div class="ambient ambient-y"></div>
-
-    <div id="loading" class="loading-card">
-      <div class="spinner"></div>
-      <strong>Preparando tu catálogo…</strong>
-      <span id="loadingText">Cargando páginas</span>
-    </div>
-
-    <div id="book" class="book" aria-label="Catálogo interactivo"></div>
-
-    <button id="prev" class="page-arrow prev" aria-label="Página anterior">‹</button>
-    <button id="next" class="page-arrow next" aria-label="Página siguiente">›</button>
-  </main>
-
-  <div class="bottom-toolbar">
-    <button id="firstPage" title="Primera página">|‹</button>
-    <button id="previousPage" title="Página anterior">‹</button>
-    <span id="pageIndicator">Página 1</span>
-    <button id="nextPage" title="Página siguiente">›</button>
-    <button id="lastPage" title="Última página">›|</button>
-    <span class="divider"></span>
-    <button id="zoomOut" title="Alejar">−</button>
-    <span id="zoomIndicator">100%</span>
-    <button id="zoomIn" title="Acercar">+</button>
-  </div>
-
-  <div class="contact-dock">
-    <a class="contact-button email" href="mailto:disenoalfacolor@gmail.com?subject=Solicitud%20de%20información%20-%20Catálogo%20Alfacolor" title="Enviar correo">✉</a>
-    <a class="contact-button whatsapp" href="https://wa.me/524775587226?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20digital%20de%20Alfacolor%20y%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20o%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener" title="Solicitar cotización por WhatsApp">WhatsApp</a>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+</section>
+<header class="topbar">
+ <img src="logo.png" class="brand-logo" alt="Alfacolor"><div class="title"><b>Catálogo Digital</b><small>Alfacolor Experience</small></div>
+ <nav><button id="toggleThumbs" title="Miniaturas">▦</button><button id="toggleSearch" title="Buscar">⌕</button><a href="catalogo.pdf" download title="Descargar">⇩</a><button id="fullscreen" title="Pantalla completa">⛶</button></nav>
+</header>
+<aside id="sidebar" class="sidebar"><div class="sidehead"><b id="sidebarTitle">Páginas</b><button id="closeSidebar">×</button></div><div id="searchPanel" class="search hidden"><input id="searchInput" placeholder="Buscar productos o servicios"><button id="searchButton">Buscar</button><div id="searchResults"></div></div><div id="thumbnails" class="thumbs"></div></aside>
+<main class="stage">
+ <div class="table-grain"></div><div id="loading" class="loading"><div class="spinner"></div><b>Preparando tu catálogo</b><span id="loadingText">Iniciando…</span><div class="progress"><i id="progressBar"></i></div></div>
+ <div id="book" class="book"></div>
+ <button id="prev" class="arrow left">‹</button><button id="next" class="arrow right">›</button>
+</main>
+<footer class="toolbar"><button id="firstPage">|‹</button><button id="previousPage">‹</button><span id="pageIndicator">Página 1</span><button id="nextPage">›</button><button id="lastPage">›|</button><i></i><button id="zoomOut">−</button><span id="zoomIndicator">100%</span><button id="zoomIn">+</button></footer>
+<div class="contact"><a href="mailto:disenoalfacolor@gmail.com">✉</a><a class="wa" href="https://wa.me/524775587226?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20digital%20de%20Alfacolor%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank">Cotizar por WhatsApp</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script><script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script><script src="app.js"></script>
+</body></html>
