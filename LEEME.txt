@@ -1,0 +1,28 @@
+CATÁLOGO DIGITAL ALFACOLOR — VERSIÓN 1
+
+ESTRUCTURA
+index.html
+css/styles.css
+js/app.js
+assets/logo.png
+assets/catalogo.pdf
+
+CÓMO PUBLICAR EN GITHUB PAGES
+1. Crea un repositorio público llamado catalogo-alfacolor.
+2. En la pestaña Code, selecciona Add file > Upload files.
+3. Abre esta carpeta descomprimida y arrastra:
+   - index.html
+   - carpeta css
+   - carpeta js
+   - carpeta assets
+4. Confirma con Commit changes.
+5. Ve a Settings > Pages.
+6. En Source elige Deploy from a branch.
+7. Selecciona main y /(root), después Save.
+8. Espera de 1 a 5 minutos y abre el enlace que muestre GitHub.
+
+IMPORTANTE
+- No subas la carpeta contenedora completa como un solo nivel adicional.
+- index.html debe quedar visible en la pantalla principal del repositorio.
+- Para cambiar el catálogo, sustituye assets/catalogo.pdf por otro PDF con el mismo nombre.
+- El visor utiliza PDF.js y PageFlip desde internet, por lo que requiere conexión.
