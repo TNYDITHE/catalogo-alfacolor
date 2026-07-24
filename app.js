@@ -1,4 +1,4 @@
-const PDF_URL = 'assets/catalogo.pdf';
+const PDF_URL = 'catalogo.pdf';
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
@@ -36,7 +36,15 @@ async function renderPage(pageNumber, scale = 1.65) {
 
 async function loadCatalog() {
   try {
-    pdfDoc = await pdfjsLib.getDocument(PDF_URL).promise;
+    if (!window['pdfjs-dist/build/pdf']) {
+      throw new Error('PDF.js no se cargó. Revisa la conexión a internet.');
+    }
+    if (!window.St || !window.St.PageFlip) {
+      throw new Error('El motor PageFlip no se cargó. Revisa la conexión a internet.');
+    }
+
+    setLoading('Abriendo archivo PDF…');
+    pdfDoc = await pdfjsLib.getDocument({ url: PDF_URL, disableAutoFetch: false }).promise;
     const total = pdfDoc.numPages;
     const pageNodes = [];
 
@@ -101,7 +109,8 @@ async function loadCatalog() {
     loading.classList.add('hidden');
   } catch (error) {
     console.error(error);
-    loading.innerHTML = '<strong>No se pudo cargar el catálogo.</strong><span>Verifica la conexión a internet o la ubicación del archivo PDF.</span>';
+    const detail = error && error.message ? error.message : 'Error desconocido';
+    loading.innerHTML = `<strong>No se pudo cargar el catálogo.</strong><span>${escapeHtml(detail)}</span><a class="primary-button error-download" href="${PDF_URL}" target="_blank" rel="noopener">Abrir PDF para comprobar</a>`;
   }
 }
 
