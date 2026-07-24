@@ -1,17 +1,16 @@
-AVANCE 1 - ALFACOLOR EXPERIENCE
+ALFACOLOR EXPERIENCE — AVANCE 2 (CATÁLOGO VERTICAL 2026)
 
-Archivos listos para reemplazar en GitHub:
-index.html
-styles.css
-app.js
-logo.png
-catalogo.pdf
+Esta versión incorpora el catálogo corregido de 28 páginas en formato vertical.
 
-1. En el repositorio catalogo-alfacolor usa Add file > Upload files.
-2. Sube los cinco archivos y confirma el reemplazo.
-3. Haz Commit changes.
-4. Espera 1-3 minutos.
-5. Abre https://tnydithe.github.io/catalogo-alfacolor/
-6. Recarga con Command + Shift + R.
+PARA ACTUALIZAR GITHUB:
+1. Descomprime este archivo ZIP.
+2. Entra al repositorio catalogo-alfacolor.
+3. Selecciona Add file > Upload files.
+4. Arrastra todos los archivos de esta carpeta.
+5. Confirma el reemplazo de los archivos existentes.
+6. Pulsa Commit changes.
+7. Espera de 1 a 3 minutos.
+8. Abre https://tnydithe.github.io/catalogo-alfacolor/
+9. Recarga sin caché con Command + Shift + R.
 
-Mejoras: nueva bienvenida, fondo premium, carga con progreso, páginas sin estiramiento y contraportada actualizada con QR.
+El visor detecta automáticamente la proporción vertical del nuevo PDF y conserva su formato sin estirar las páginas.
